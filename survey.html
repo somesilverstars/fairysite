@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Misunderstandings</title>
+<link href="home.css" rel="stylesheet" type="text/css">
+
+
+<script>
+function check_hero(m) {
+var hero=m.value
+if (hero==="yes"){
+document.getElementById("response1").innerHTML = "You would be right, as fairytales tend to form our beliefs on what adulthood and the future could look like.";
+}
+else if (hero==="Maybe"){
+document.getElementById("response1").innerHTML = "It really depends on the person, but it is present regardless.";
+}
+else if (hero==="No"){
+document.getElementById("response1").innerHTML = "Not quite, as stories really form our basic understanding of survival and expected behaviors. They make more of an impact than you think.";
+}
+}
+</script>
+<script>
+function check_good(e) {
+var good=e.value
+if (good==="Yes1"){
+document.getElementById("response2").innerHTML = "Admirable, but even heroes have flaws that they refuse to work on.";
+}
+else if (good==="Maybe2"){
+document.getElementById("response2").innerHTML = "Sure, as some can be genuinely good at making rational choices under pressure, and that makes them a good role model.";
+}
+else if (good==="Nope3"){
+document.getElementById("response2").innerHTML = "Fair, and its good that you acknowledge this. Not everyone is perfect, and it is an impossible standard to place on people regardless.";
+}
+
+
+}
+</script>
+
+
+
+</head>
+<body>
+<form action="/email.php" method="post">
+<input type="hidden" name="email" id="email" value="mannashlin1228@gmail.com">
+ <div class="navigation">
+ <ul>
+ <li><a href="home.html" >Home</a></li>
+ <li><a href="types.html">Connections to Nature</a></li>
+ <li><a href="miracle.html">The Hero Complex</a></li>
+ <li><a href="network.html">Adventure Awaits!</a></li>
+ <li><a href="survey.html"class="on">Misunderstandings</a></li>
+  </ul>
+ </div>
+
+
+<div class="content">
+ <img class="right" src="castle.gif" width="224" height="200" alt="fairytale castle">
+<h1>Oxford Academic: Fairytale Historical Context</h1>
+
+<p class="videoTalk"> We've talked about the stories themselves, but not yet about the context of which it is told. That is important too, as the exigence of these tales really helps develop depth and understanding of what times were like back then. Certain variations have different messages, characters, and endings. All of these are direct reflections of the circumstances of which these tales are told in. </p>
+
+<p align="center">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/66f4S4_o154?si=WUj9VC55DG8VKesK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+</p><br><br><br><br><br>
+<p align ="center">Fill out the survey below and let us know your thoughts about stories!</p><br><br><br><br>
+
+
+
+
+
+<h1 class="spec2">Survey</h1>
+
+<p>
+<table cellpadding="5" cellspacing="5" width="60%" bgcolor="#000000">
+<tr> <td width="50%" align="center"> 
+<label>
+Please enter your name: </td>
+<td> <input type="text" name="visitor" size="40" required="required"/></label></td> </tr>
+<tr> <td width="50%" align="right"><label>
+Please enter your email address: </td>
+<td><input type="email" name="visitormail" size="40" required="required"/></label></td> </tr>
+
+<tr> <td colspan="2"> What is your favorite myth/story and what about the message do you like? </font></td></tr>
+<tr><td width="100%" align="right"><font color="green"><label><b>Enter Response Here:  </b></font></td>
+<td><input type="text" name="aresponse" size="50"/></label></td>
+</tr> </table>
+
+<p class="spec2"><b>To what extent do you think myths and fairytales influence our actions?</b><br> 
+
+<label><input  onclick="check_hero(this)" id="hero1"   type="radio" name="story" value="yes"/>
+A Lot, because they teach us lessons on what to do and what to avoid.</label>
+<br>
+<label><input onclick="check_hero(this)" id="hero2" type="radio" name="story" value="Maybe" checked="checked"/>
+Not much, maybe some stories are more impactful than others </label> 
+<br>
+<label><input onclick="check_hero(this)" id="hero3" type="radio" name="story" value="No"/>
+Not at all, they're just stories; nobody really learns much from them  </label>
+<br>
+<div id="response1"></div>
+</p>
+<p class="spec2" ><b> Are the characters portrayed as heroes always good people?</b><br>
+<label><input onclick="check_good(this)" id="good1" type="checkbox" name="goodorbad1" value="Yes1"/>
+Yes, they are made to be people we should aspire to be</label> <br>
+
+<label><input  onclick="check_good(this)" id="good2" type="checkbox" name="goodorbad2" value="Maybe2"/>
+They aren't perfect, but they're not evil either</label><br>
+
+<label><input onclick="check_good(this)" id="good3" type="checkbox" name="goodorbad3" value="Nope3"/>
+No, stories are only told from their point of view. Who knows how many innocents they
+harm due to misconceptions. </label><br>
+<div id="response2"></div>
+</p>
+
+<p>If you were in a fairytale, what role would you play?
+<select name="activity">
+<option value="the main character, of course">the main character, of course</option>
+<option value="the villian">the villian</option>
+<option value="the supporting guide/friend">the supporting guide/friend</option>
+<option value="the mentor">the mentor</option>
+</select>
+
+<p><label>Lastly, tell me a little secret about yourself:
+<input type="password" name="secret" size="35"></label>
+</p>
+
+
+<p align="center"><label><b>Please type any questions or comments you have in the box below.</b><br>
+<textarea name="comments" rows="4" cols="45"></textarea></label>
+</p>
+
+<p align="center">
+<button type="submit" <a href="thanks.html" class="on"></a>name="submit"><img src="text5.png" alt="submit button" width="105" height="47"></button>&nbsp;&nbsp;
+
+<button type="reset" name="reset"> <img src="text6.gif" width="106" height="51"></button>
+</p> 
+
+ <a name="top"></a>
+<p align="center"><a style="color:#ffffff" href="#top">Back to the top</a> </p>
+ </div>
+</form>
+</body>
+</html>
