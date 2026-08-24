@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Adventure Awaits!</title>
+<link href="home.css" rel="stylesheet" type="text/css">
+<style>
+.price {
+text-align: right; 
+}
+td 
+{vertical-align: top;
+}
+button{
+color: #ffffff;
+font-size: 30px;
+} 
+</style>
+</head>
+<body>
+
+<input type="hidden" name="email" id="email" value="mannashlin1228@gmail.com">
+ <div class="navigation">
+ <ul>
+ <li><a href="home.html" >Home</a></li>
+ <li><a href="types.html">Connections to Nature</a></li>
+ <li><a href="miracle.html">The Hero Complex</a></li>
+ <li><a href="network.html"class="on">Adventure Awaits!</a></li>
+ <li><a href="survey.html">Misunderstandings</a></li>
+  </ul>
+ </div>
+
+
+<div class="content">
+ <h1 align="center">Buy Our Newsletter Subscriptions!</h1>
+<table cellpadding="5" cellspacing="15">
+<thead><tr>
+<th>Select</th> <th>Item</th> <th>Description</th> <th>Price</th>
+</tr></thead> 
+<tbody>
+
+
+<tr>
+ <td><input type="checkbox" value="60.00" class="menu-item"></td>
+ <td>Annual</td>
+ <td>Our yearly subscription has a total of 48 newsletters delivered to you in the span of a whole year! Learn more every week about new stories, tales, myths, and fun facts on how myths influence the real world.<br></td>
+ <td class="price">$60.00</td>
+ </tr>
+
+
+<tr><td><input type="checkbox" value="1.50" class="menu-item"</td>
+<td>Weekly</td>
+<td>Not sure if you want to commit? Try this one out and buy one of our weekly newsletter for a reasonable price.</td>
+<td class="price">$1.50</td>
+</tr>
+
+
+<tr>
+<td><input type="checkbox" value="5.00" class="menu-item"></td>
+ <td>Monthly</td>
+ <td>Pay for 4 newsletters and save a dollar every month! <br></td>
+<td class="price">$5.00</td>
+ </tr>
+
+
+
+
+ <tr>
+  <td><input type="checkbox" value="30.00" class="menu-item"></td>
+  <td>Semi-Annual (6 months) </td>
+ <td>Our 6 month subscription entails 24 newsletters for one purchase, and you save 6 dollars<br></td>
+                    <td class="price">$30.00</td>
+                </tr>
+                
+
+
+                
+
+<tr>
+ <td><input type="checkbox" value="100.00" class="menu-item"></td>
+<td>2 Years</td>
+ <td>**Special Discount** Make only one payments every two years to get the full experience! Save 20 dollars<br></td>
+<td class="price" valign="top">$100.00</td>
+ </tr>
+
+                    
+  </tbody>
+        </table>
+        
+        <button onclick="calculateTotal()">Calculate Total</button>
+        <h2 id="totalPrice"></h2>
+    </div>
+
+    <script>
+        function calculateTotal() {
+            let total = 0;
+            const items = document.querySelectorAll('.menu-item:checked');
+            items.forEach(item => {
+                total += parseFloat(item.value);
+            });
+            document.getElementById('totalPrice').innerText = "Total Price: $" + total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
+ </div>
+</body>
+</html>
